@@ -5,7 +5,7 @@ import './style.scss';
 
 export default function About() {
   return (
-    <div>App  </div>
+    <div>Coming Soon</div>
 );
 }
 
