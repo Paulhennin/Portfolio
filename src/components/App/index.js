@@ -6,7 +6,7 @@ import NavBar from 'src/components/NavBar';
 import Portfolio from 'src/components/Portfolio';
 import About from 'src/components/About';
 import Background from 'src/components/Background';
-
+import Footer from 'src/components/Footer';
 
 export default function App() {
   const cursorRef = useRef();
@@ -36,6 +36,7 @@ export default function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </>
   );

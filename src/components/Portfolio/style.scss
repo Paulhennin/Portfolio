@@ -13,6 +13,7 @@
     box-shadow: 10px 10px 30px color.scale(vars.$primary, $lightness: -90%);
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 
@@ -67,5 +68,26 @@ h2{
     &:hover {
       background-color: color.scale(vars.$background, $lightness: -30%);
     }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    padding-top: 20px;
+    padding: 1rem 3%;
+    padding-top: 3rem;
+    &__lang-cards {
+    }
+    &__lang { 
+    padding-bottom: 3rem; 
+    }
+  }
+  .card {
+    width: 100%;
+    margin: 0.3rem;
+  }
+  
+  .footer {
+    position: relative;
   }
 }

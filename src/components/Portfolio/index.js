@@ -8,7 +8,7 @@ export default function Porfolio() {
     <div className="container">
       <h1> Portfolio</h1>
       <section className="container__lang">
-          <h2>Ruby / RoR</h2>
+        <h2>Ruby / RoR</h2>
         <div className="container__lang-cards">
           <article className="card">
             <Iframe url="http://mangahiro.herokuapp.com/mangahiro" style="background-color: transparent;" className="iframe__img" width="100%" height="100%" />
