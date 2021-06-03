@@ -1,0 +1,75 @@
+@use 'reset';
+@use 'vars' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+body {
+  font-family: sans-serif;
+  background: v.$background;
+  height: 100vh;
+  width: 100vw;
+  color: v.$primary;
+  
+}
+* {cursor:none;}
+.cursor {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 200;
+  border: 1px dashed v.$primary;
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-out;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(230, 126, 0, 0.7);
+		border: 3px solid rgb(230, 126, 0, 0.3);
+	}
+	
+
+	100% {
+    transform: scale(0.2);
+		box-shadow: 0 0 0 0 rgb(230, 126, 0, 0);
+		border: 1px solid rgb(230, 126, 0, 1);
+
+	}
+}
+.cursor-point{
+  content: '';
+  position: absolute;
+  transform: translate(50%, 50%);
+  width: 10px;
+  height: 10px;
+  z-index: 200;
+  pointer-events: none;
+
+  background: v.$primary;
+  border-radius: 50%;
+}
+.cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: v.$primary;
+  border-radius: 50%;
+}
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/

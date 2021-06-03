@@ -1,0 +1,31 @@
+@use 'src/styles/vars' as v;
+
+.nav {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  font-family: 'Sigmar One', cursive;
+  display: flex;
+  background-color: v.$background;
+  box-shadow: 0px 10px 10px black;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  font-size: 2rem;
+  cursor: none;
+}
+
+.nav__item{
+  cursor:none;
+  padding: 1rem;
+  border: 3px solid transparent;
+  transition: all 0.5s ease-out;
+  position: relative;
+  &-active {
+    border-bottom: 3px dotted v.$primary;
+    transform: scale(1.2);
+    text-shadow: 3px 3px rgba(206, 90, 55, 0.364)
+    
+  }
+}
