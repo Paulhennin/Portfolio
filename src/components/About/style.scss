@@ -1,0 +1,185 @@
+.container__about {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 720px) {
+  .container__about {
+    top: 220px;
+    left: 0;
+    padding-bottom: 50px;
+    z-index: 1;
+  }
+}
+
+
+main {
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  overflow-y: scroll;
+  position: absolute;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  color: rgb(230, 126, 0);
+  padding-bottom: 70px;
+}
+
+
+.background {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+}
+
+.clip-me-reverse {
+  position:absolute;
+  width: 15px;
+  bottom:-15vh;
+  height: 15vh;
+  background: linear-gradient(to top, rgba(255, 147, 6, 0) 0%,  #ffae00 75%, #ffae00 100%);
+  animation: upside 3.5s 1.5s infinite ease-in-out;
+}
+
+@keyframes upside {
+  0% { transform: translateY(100vh)}
+  100% { transform: translateY(-105vh) }
+}
+
+.personnal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:4px double rgb(230, 126, 0);
+  height:250px;
+  padding: 0 6%;
+}
+
+.personnal-lists {
+  position: absolute;
+  list-style-type: none;
+  top: 2rem;
+  right: 2rem;
+  margin: 1rem;
+}
+
+.img-cv {
+  position: absolute;
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  top: 20px;
+  left: 5%;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+}
+
+h1.titlename {
+padding: 3.7rem 0;
+font-size: 4rem;
+}
+
+.professionnal, .studies {
+  padding: 1rem 3rem 3rem 3rem;
+  border-bottom:4px double rgb(230, 126, 0);
+}
+.hobbies {
+  padding: 1rem 3rem 3rem 3rem;
+}
+.cv-titles {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+em {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.back {
+  display:flex;
+  justify-content: center;
+}
+a.back-summary {
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+a.back-summary:hover {
+  border: 2px solid rgb(230, 126, 0);
+  border-radius: 5px;
+}
+
+/* Responsive part */
+
+@media (max-width:1250px){
+  header {
+      display: none;
+  }
+  main {
+      margin-left: auto;
+      width: 100%;
+  }
+  h1.titlename {
+      padding: 3.7rem 0;
+      font-size: 4rem;
+      }
+
+  .personnal-lists {
+      top: 0;
+      right: 0;
+      margin: 1rem;
+      }
+}
+.professionnal, .studies, .hobbies {
+  & ul li {
+    font-size: 1.6rem;
+    & em {
+      text-decoration: underline;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width:900px){
+  h1.titlename {
+      font-size: 3rem;
+      }
+}
+
+@media (max-width:790px){
+  .professionnal, .studies, .hobbies {
+    padding: 1rem 0.3rem 3rem 0.3rem;
+    & ul li {
+      padding-left: 10px;
+      list-style: square;
+      & em {
+        text-decoration: underline;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .img-cv {
+      display:none;
+  }
+  .personnal-lists {
+      position: relative;
+  }
+  .personnal {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: auto;
+  }
+  h1.titlename {
+      padding:0;
+      font-size: 3rem;
+      }
+}

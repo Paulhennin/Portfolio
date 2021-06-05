@@ -1,14 +1,15 @@
 @use 'reset';
 @use 'vars' as v;
-
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 body {
   font-family: sans-serif;
   background: v.$background;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: v.$primary;
+  overflow-x: hidden;
   
 }
 * {cursor:none;}

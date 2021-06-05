@@ -7,6 +7,7 @@ import Portfolio from 'src/components/Portfolio';
 import About from 'src/components/About';
 import Background from 'src/components/Background';
 import Footer from 'src/components/Footer';
+import BackgroundLine from '../BackgroundLine';
 
 export default function App() {
   const cursorRef = useRef();
@@ -26,6 +27,7 @@ export default function App() {
         <div className="app__content">
           <Switch>
             <Route exact path="/">
+              <BackgroundLine />
               <Background />
             </Route>
             <Route exact path="/portfolio">
