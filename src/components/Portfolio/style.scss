@@ -1,44 +1,45 @@
 @use 'src/styles/vars';
 @use 'sass:color';
 @use 'sass:math';
+.no-pointer {
+  pointer-events: none;
+}
 .container {
   width: 100vw;
   height: 100vh;
   position:absolute;
   top: 190px;
   left: 0px;
-  padding: 1rem 10%;
+  padding: 1rem 30%;
+  &__lang {
+    padding-bottom: 4rem;
+  }
   &__lang-cards {
     border: 2px solid vars.$primary;
     padding: 0.6rem;
     border-radius: 15px;
     box-shadow: 10px 10px 30px color.scale(vars.$primary, $lightness: -90%);
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
   }
-}
-
-.iframe__img {
-  background-image: cover;
-  background-position: cover cover;
-  overflow: hidden;
-  height: 300px;
 }
 section {
   text-align: left;
 }
 h2{
   font-size: 2rem;
-  margin-top: 2rem;
   padding: 1rem
 }
 .card {
   border-radius: 1rem;
   border: 1px solid #ddd;
-  width: 30%;
+  width: 90%;
   overflow: hidden;
   z-index: 0;
+  margin: 10px 0;
   &-content {
     padding:  1rem;
     text-align: center;
@@ -60,7 +61,7 @@ h2{
     color: white;
     display: inline-block;
     font-size: 1.2rem;
-    width: auto;
+    width: 150px;
     text-align: center;
     border-radius: 5px;
     padding:  0.8rem;
@@ -69,6 +70,11 @@ h2{
     border: 1px solid white;
     &:hover {
       background-color: color.scale(vars.$background, $lightness: -30%);
+    }
+    &-deck {
+      display: flex;
+      justify-content: space-between;
+
     }
   }
 }
@@ -94,4 +100,19 @@ h2{
   .footer {
     position: relative;
   }
+}
+
+.react {
+  border-color: vars.$react;
+  color: vars.$react;
+}
+
+.vue {
+  border-color: vars.$vue;
+  color: vars.$vue;
+}
+
+.ruby {
+  border-color: vars.$ruby;
+  color: vars.$ruby;
 }

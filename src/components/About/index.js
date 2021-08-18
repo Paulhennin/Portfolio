@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import SnakeButtons from './SnakeButtons';
 import portrait from './portrait.jpg';
 import './style.scss';
 
@@ -91,7 +93,7 @@ export default function About() {
         </div>
       </section>
       <section className="back">
-        <h3><a className="back-summary" href="index.html">Retour à l'accueil</a></h3>
+        <SnakeButtons />
       </section>
     </main>
 );
