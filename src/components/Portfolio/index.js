@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Iframe from 'react-iframe';
 import './style.scss';
-import PlayrFindR from 'src/assets/playrfindr.png'
-import mangahiro from 'src/assets/mangahiro.PNG'
-import orgatravel from 'src/assets/orgatravel.png'
-import LogoGardien from 'src/assets/LogoGardien.png'
-import TitreGardien from 'src/assets/TitreGardienNoir.png'
+import PlayrFindR from 'src/assets/playrfindr.png';
+import mangahiro from 'src/assets/mangahiro.PNG';
+import orgatravel from 'src/assets/orgatravel.png';
+import LogoGardien from 'src/assets/LogoGardien.png';
+import TitreGardien from 'src/assets/TitreGardienNoir.png';
+import WhatToCook from 'src/assets/whattocook_logo_white.png';
 
 export default function Porfolio() {
   return (
@@ -39,7 +40,28 @@ export default function Porfolio() {
           </article>
           <article className="card react">
             <div className="card-content">
-            <img src={orgatravel} alt="logo site OrgaTravel" className="project_logo"/>
+              <img src={WhatToCook} alt="logo site 'What to cook ?'" className="project_logo" />
+              <h2 className="card-title react">What to Cook ?</h2>
+              <p className="card-desc">Site de recettes cuisine permettant de proposer des plats en fonction de ce qu'on a chez nous.</p>
+              <div className="card-link-deck">
+                <a
+                  className="card-link rect"
+                  href="http://whattocook-ph.surge.sh"
+                >
+                  Site
+                </a>
+                <a
+                  className="card-link react"
+                  href="https://github.com/Paulhennin/whattocook"
+                >
+                  Github
+                </a>
+              </div>
+            </div>
+          </article>
+          <article className="card react">
+            <div className="card-content">
+              <img src={orgatravel} alt="logo site OrgaTravel" className="project_logo" />
               <h2 className="card-title react">OrgaTravel</h2>
               <p className="card-desc">Une API qui arrivera bientôt, stay tuned !</p>
               <div className="card-link-deck">
